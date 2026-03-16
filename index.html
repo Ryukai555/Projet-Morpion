@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morpion</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Morpion</h1>
+    </header>
+
+    <main class="zone-jeu">
+
+        <div id="menuMode">
+
+            <h2>Choisir le mode</h2>
+
+            <button id="modeJoueur">2 Joueurs</button>
+            <button id="modeOrdi">Vs Ordinateur</button>
+
+        </div>
+
+
+        <div class="score">
+            <h2>Score</h2>
+            <p>Joueur X : <span id="score1">0</span></p>
+            <p>Joueur O : <span id="score2">0</span></p>
+        </div>
+
+        <section id="morpion">
+
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+
+        </section>
+
+    </main>
+
+
+    <div id="messageVictoire" class="hidden">
+        <p id="texteVictoire"></p>
+        <button id="rejouer">Rejouer</button>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
