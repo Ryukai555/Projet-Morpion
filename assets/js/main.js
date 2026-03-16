@@ -106,6 +106,22 @@ function scanWin() {
 
         }
     })
+    
+    let grillePleine = true
+    
+    cases.forEach(caseMorpion => {
+        if (caseMorpion.textContent === "") {
+            grillePleine = false
+        }
+    })
+
+    if (grillePleine && !gameOver) {
+        victoireMessage.classList.remove("hidden")
+        document.querySelector("#texteVictoire").textContent = "Match nul !"
+
+        gameOver = true
+
+    }
 
 }
 
@@ -121,7 +137,7 @@ function ordinateurJoue() {
 
     if (casesLibres.length === 0) return
 
-    let randomIndex = casesLibres[Math.floor(Math.random() * casesLibres.length)]          
+    let randomIndex = casesLibres[Math.floor(Math.random() * casesLibres.length)]
 
     cases[randomIndex].textContent = "O"
 
@@ -143,3 +159,4 @@ function resetGame() {
 
     gameOver = false
 }
+
